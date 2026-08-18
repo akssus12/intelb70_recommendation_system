@@ -14,7 +14,7 @@ from pathlib import Path
 import torch
 
 SCRATCH = Path(__file__).resolve().parent
-REPO    = Path('/home/akssus12/fork/intelb70_recommendation_system')
+REPO    = Path('Set your system path') # Set your system path
 for p in (str(REPO), str(SCRATCH)):
     if p not in sys.path:
         sys.path.insert(0, p)
@@ -42,6 +42,7 @@ def measure(device_name, batches, movies, top_k, seed, min_iters, target_samples
             return (all_embs @ U.T).topk(top_k, dim=0).indices.T.cpu()
 
     out = {}
+
     for B in batches:
         reqs = [[(t, 5.0) for t in rng.sample(pool, movies)] for _ in range(B)]
         dis  = [[] for _ in range(B)]

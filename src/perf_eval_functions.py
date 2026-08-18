@@ -13,7 +13,7 @@ import numpy as np
 import pandas as pd
 import torch
 
-REPO = Path('/home/akssus12/fork/intelb70_recommendation_system')
+REPO = Path('Set your system path') # Set your system path
 sys.path.insert(0, str(REPO))
 
 from src.inference import build_user_embedding
