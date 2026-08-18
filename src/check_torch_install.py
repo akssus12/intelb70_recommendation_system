@@ -8,3 +8,4 @@ if torch.xpu.is_available():
     a = torch.randn(4096, 4096, device='xpu'); b = torch.randn(4096, 4096, device='xpu')
     c = (a @ b).sum().item(); torch.xpu.synchronize()
     print('matmul 통과:', c)
+    

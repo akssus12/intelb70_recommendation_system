@@ -18,6 +18,7 @@ REPO    = Path('Set your system path') # Set your system path
 for p in (str(REPO), str(SCRATCH)):
     if p not in sys.path:
         sys.path.insert(0, p)
+        
 
 from perf_eval_functions import (build_user_embedding_batch, load_serving,
                               resolve_device, sample_pool, sync)
